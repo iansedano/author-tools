@@ -143,5 +143,57 @@
 			">",
 			"> --- *${2:Firstname Lastname}*"
 		]
-	}
+	},
+  "Platform-Specific Block Minimal": {
+    "scope": "markdown",
+		"prefix": "rpplatformmin",
+		"body": [
+			"{% platforms %}",
+			"",
+			"{% windows %}",
+			"",
+			"```pscon",
+			"PS> $1",
+			"```",
+			"",
+			"{% linux_and_macos %}",
+			"",
+			"```console",
+			"$ $2",
+			"```",
+			"",
+			"{% endplatforms %}",
+			""
+		],
+		"description": "Add Platform tabbed selector block with a two way choice of _Windows_ and _Linux or macOS_"
+	},
+  "Platform-Specific Block All": {
+    "scope": "markdown",
+		"prefix": "rpplatformall",
+		"body": [
+			"{% platforms %}",
+			"",
+			"{% windows %}",
+			"",
+			"```pscon",
+			"PS> $1",
+			"```",
+			"",
+			"{% linux %}",
+			"",
+			"```console",
+			"$ $2",
+			"```",
+			"",
+			"{% macos %}",
+			"",
+			"```console",
+			"$ $3",
+			"```",
+			"",
+			"{% endplatforms %}",
+			""
+		],
+		"description": "Add Platform tabbed selector block with a three way choice of Windows, Linux, and macOS"
+	},
 }
