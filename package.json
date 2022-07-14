@@ -12,7 +12,8 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.sayHello"
+        "onCommand:extension.sayHello",
+        "onLanguage:markdown"
     ],
     "main": "./out/extension.js",
     "contributes": {
@@ -26,6 +27,14 @@
             {
                 "language": "markdown",
                 "path": "./snippets/markdown.code-snippets"
+            }
+        ],
+        "grammars": [
+            {
+                
+                "scopeName": "rp-markdown.injection",
+                "path": "./syntaxes/markdownInjection.tmGrammar.json",
+                "injectTo": ["text.html.markdown"]
             }
         ]
     },

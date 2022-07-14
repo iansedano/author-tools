@@ -1,0 +1,11 @@
+{
+  "scopeName": "rp-markdown.injection",
+  "injectionSelector": "L:text.html.markdown",
+  "patterns": [{ "include": "#jinja-tag" }],
+  "repository": {
+    "jinja-tag" : {
+      "match": "{%.+%}",
+      "name": "keyword"
+    }
+  }
+}
